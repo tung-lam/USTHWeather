@@ -1,0 +1,253 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vn.edu.usth.weather.Fragment.WeatherAndForecast"
+    android:orientation="vertical">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:name="vn.edu.usth.weather.Fragment.WeatherFragment"
+        android:tag="weather_part"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:name="vn.edu.usth.weather.Fragment.ForecastFragment"
+        android:tag="forecast_part"/>
+
+
+    <!--This is fragment_weather.xml-->
+   <!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="#440000ff"
+        tools:context="vn.edu.usth.weather.Fragment.WeatherFragment">
+
+        &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13C\nCloudy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Paris"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon03" />
+    </RelativeLayout>-->
+
+    <!--This is fragment_forecast.xml-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="#20ff0000"
+        android:orientation="vertical"
+        tools:context="vn.edu.usth.weather.Fragment.ForecastFragment">
+
+        &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Mon"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon01"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Partly Cloudy\n25C - 31C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Tue"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon02"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Showers\n24C - 30C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Wed"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon03"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Rain\n22C - 23C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Thu"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon01"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Scattered Showers\n22C - 27C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Fri"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon02"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Mostly Cloudy\n22C - 30C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Sat"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon03"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Partly Cloudy\n24C - 31C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Sun"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon01"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Thunderstorms\n24C - 27C"/>
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+</LinearLayout>

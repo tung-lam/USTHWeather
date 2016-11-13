@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">USTH Weather</string>
+
+    <string name="city">Hà Nội</string>
+    <string name="today">13C\nNhiều mây</string>
+
+    <string name="monday">Ít mây\n25C - 31C</string>
+    <string name="tuesday">Mưa rào\n24C - 30C</string>
+    <string name="wednesday">Có mưa\n22C - 23C</string>
+    <string name="thursday">Mưa rào rải rác\n22C - 27C</string>
+
+</resources>

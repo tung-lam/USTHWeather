@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#20ff0000"
+    android:orientation="vertical"
+    tools:context="vn.edu.usth.weather.Fragment.ForecastFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Mon"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon01"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="@string/monday"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Tue"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon02"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="@string/tuesday"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Wed"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon03"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="@string/wednesday"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Thu"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon01"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="@string/thursday"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Fri"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon02"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Mostly Cloudy\n22C - 30C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Sat"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon03"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Partly Cloudy\n24C - 31C"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40px"
+                android:layout_height="match_parent">
+            </View>
+
+            <TextView
+                android:layout_width="60px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="Sun"/>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon01"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:text="Thunderstorms\n24C - 27C"/>
+        </LinearLayout>
+
+</LinearLayout>
