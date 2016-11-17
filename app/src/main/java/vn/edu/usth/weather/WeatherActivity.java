@@ -11,7 +11,10 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import java.io.File;
 import java.io.IOException;
@@ -41,6 +44,9 @@ public class WeatherActivity extends AppCompatActivity {
 
         mediaPlayer = MediaPlayer.create (this, R.raw.kiss_the_rain);
         mediaPlayer.start();
+
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
 
 //        String filePath = Environment.getExternalStorageDirectory()+"/music/kiss_the_rain.mp3";
 //        mediaPlayer = MediaPlayer.create(this, Uri.parse(Environment.getExternalStorageDirectory().getPath()+ "/music/kiss_the_rain.mp3"));
@@ -129,4 +135,20 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_weather, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                // do something when search is pressed here
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
