@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
@@ -146,6 +147,13 @@ public class WeatherActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_search:
                 // do something when search is pressed here
+                return true;
+            case R.id.action_refresh:
+                CharSequence text = "Refreshing";
+                int duration = Toast.LENGTH_SHORT;
+
+                Toast toast = Toast.makeText(this, text, duration);
+                toast.show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
