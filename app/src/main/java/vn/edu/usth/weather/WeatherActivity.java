@@ -1,5 +1,8 @@
 package vn.edu.usth.weather;
 
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Environment;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,11 +13,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+
 import vn.edu.usth.weather.Fragment.ForecastFragment;
 import vn.edu.usth.weather.Fragment.WeatherAndForecast;
 import vn.edu.usth.weather.Fragment.WeatherFragment;
 
 public class WeatherActivity extends AppCompatActivity {
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +39,30 @@ public class WeatherActivity extends AppCompatActivity {
         pager.setOffscreenPageLimit(3);
         pager.setAdapter(adapter);
 
+        mediaPlayer = MediaPlayer.create (this, R.raw.kiss_the_rain);
+        mediaPlayer.start();
+
+//        String filePath = Environment.getExternalStorageDirectory()+"/music/kiss_the_rain.mp3";
+//        mediaPlayer = MediaPlayer.create(this, Uri.parse(Environment.getExternalStorageDirectory().getPath()+ "/music/kiss_the_rain.mp3"));
+
+//        try {
+//            mediaPlayer.setDataSource(filePath);
+//            mediaPlayer.prepare();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+//        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC), "kiss_the_rain.mp3");
+//        mediaPlayer = new MediaPlayer();
+//        try {
+//            mediaPlayer.setDataSource(file.getAbsolutePath());
+//            mediaPlayer.prepare();
+//            mediaPlayer.start();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+
 
 //        ForecastFragment forecastFragment = new ForecastFragment();
 //        getSupportFragmentManager().beginTransaction().add(R.id.container, forecastFragment).commit();
@@ -40,6 +72,7 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        mediaPlayer.pause();
         Log.i("WeatherActivity", "onPause: This is a log message.");
     }
 
@@ -52,6 +85,7 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+//        mediaPlayer.reset();
         Log.i("WeatherActivity", "onResume: This is a log message.");
     }
 
